@@ -11,12 +11,12 @@ public class ContribuicaoDTO {
     private String estado;
     private String endereco;
     private Double valor;
-    private FormaPagamento formaPagamento;
+    private String formaPagamento;
 
     public ContribuicaoDTO() {
     }
 
-    public ContribuicaoDTO(String nomeCompleto, String telefone, String email, String cidade, String estado, String endereco, Double valor, FormaPagamento formaPagamento) {
+    public ContribuicaoDTO(String nomeCompleto, String telefone, String email, String cidade, String estado, String endereco, Double valor, String formaPagamento) {
         this.nomeCompleto = nomeCompleto;
         this.telefone = telefone;
         this.email = email;
@@ -83,11 +83,11 @@ public class ContribuicaoDTO {
         this.valor = valor;
     }
 
-    public FormaPagamento getFormaPagamento() {
+    public String getFormaPagamento() {
         return formaPagamento;
     }
 
-    public void setFormaPagamento(FormaPagamento formaPagamento) {
+    public void setFormaPagamento(String formaPagamento) {
         this.formaPagamento = formaPagamento;
     }
 }

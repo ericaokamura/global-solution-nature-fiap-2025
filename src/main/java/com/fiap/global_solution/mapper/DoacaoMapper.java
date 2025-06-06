@@ -4,6 +4,8 @@ import com.fiap.global_solution.model.Report;
 import com.fiap.global_solution.model.dto.DoacaoDTO;
 import com.fiap.global_solution.model.Doacao;
 import com.fiap.global_solution.model.dto.ReportDTO;
+import com.fiap.global_solution.model.enums.Condicao;
+import com.fiap.global_solution.model.enums.FormaEntrega;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -20,8 +22,8 @@ public class DoacaoMapper {
         dto.setEstado(model.getEstado());
         dto.setEndereco(model.getEndereco());
         dto.setItensDoados(model.getItensDoados());
-        dto.setCondicao(model.getCondicao());
-        dto.setFormaEntrega(model.getFormaEntrega());
+        dto.setCondicao(model.getCondicao().name());
+        dto.setFormaEntrega(model.getFormaEntrega().name());
         return dto;
     }
 
@@ -33,9 +35,8 @@ public class DoacaoMapper {
         model.setCidade(dto.getCidade());
         model.setEstado(dto.getEstado());
         model.setEndereco(dto.getEndereco());
-        model.setItensDoados(dto.getItensDoados());
-        model.setCondicao(dto.getCondicao());
-        model.setFormaEntrega(dto.getFormaEntrega());
+        model.setCondicao(Condicao.valueOf(dto.getCondicao()));
+        model.setFormaEntrega(FormaEntrega.valueOf(dto.getFormaEntrega()));
         return model;
     }
 
@@ -50,8 +51,8 @@ public class DoacaoMapper {
             dto.setEstado(model.getEstado());
             dto.setEndereco(model.getEndereco());
             dto.setItensDoados(model.getItensDoados());
-            dto.setCondicao(model.getCondicao());
-            dto.setFormaEntrega(model.getFormaEntrega());
+            dto.setCondicao(model.getCondicao().name());
+            dto.setFormaEntrega(model.getFormaEntrega().name());
             dtos.add(dto);
         }
         return dtos;
@@ -67,9 +68,8 @@ public class DoacaoMapper {
             model.setCidade(dto.getCidade());
             model.setEstado(dto.getEstado());
             model.setEndereco(dto.getEndereco());
-            model.setItensDoados(dto.getItensDoados());
-            model.setCondicao(dto.getCondicao());
-            model.setFormaEntrega(dto.getFormaEntrega());
+            model.setCondicao(Condicao.valueOf(dto.getCondicao()));
+            model.setFormaEntrega(FormaEntrega.valueOf(dto.getFormaEntrega()));
             doacoes.add(model);
         }
         return doacoes;

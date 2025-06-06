@@ -17,13 +17,13 @@ public class DoacaoDTO {
     private String estado;
     private String endereco;
     private List<ItemDoado> itensDoados;
-    private Condicao condicao;
-    private FormaEntrega formaEntrega;
+    private String condicao;
+    private String formaEntrega;
 
     public DoacaoDTO() {
     }
 
-    public DoacaoDTO(String nomeCompleto, String telefone, String email, String cidade, String estado, String endereco, List<ItemDoado> itensDoados, Condicao condicao, FormaEntrega formaEntrega) {
+    public DoacaoDTO(String nomeCompleto, String telefone, String email, String cidade, String estado, String endereco, List<ItemDoado> itensDoados, String condicao, String formaEntrega) {
         this.nomeCompleto = nomeCompleto;
         this.telefone = telefone;
         this.email = email;
@@ -91,19 +91,19 @@ public class DoacaoDTO {
         this.itensDoados = itensDoados;
     }
 
-    public Condicao getCondicao() {
+    public String getCondicao() {
         return condicao;
     }
 
-    public void setCondicao(Condicao condicao) {
+    public void setCondicao(String condicao) {
         this.condicao = condicao;
     }
 
-    public FormaEntrega getFormaEntrega() {
+    public String getFormaEntrega() {
         return formaEntrega;
     }
 
-    public void setFormaEntrega(FormaEntrega formaEntrega) {
+    public void setFormaEntrega(String formaEntrega) {
         this.formaEntrega = formaEntrega;
     }
 }

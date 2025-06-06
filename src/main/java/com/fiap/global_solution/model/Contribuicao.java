@@ -17,6 +17,7 @@ public class Contribuicao {
     private String estado;
     private String endereco;
     private Double valor;
+    @Enumerated(EnumType.STRING)
     private FormaPagamento formaPagamento;
 
     public Contribuicao() {

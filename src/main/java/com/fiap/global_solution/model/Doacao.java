@@ -22,8 +22,11 @@ public class Doacao {
     private String cidade;
     private String estado;
     private String endereco;
+    @OneToMany(cascade = CascadeType.ALL)
     private List<ItemDoado> itensDoados;
+    @Enumerated(EnumType.STRING)
     private Condicao condicao;
+    @Enumerated(EnumType.STRING)
     private FormaEntrega formaEntrega;
 
     public Doacao() {

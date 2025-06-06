@@ -4,6 +4,8 @@ import com.fiap.global_solution.model.Contribuicao;
 import com.fiap.global_solution.model.Doacao;
 import com.fiap.global_solution.model.dto.ContribuicaoDTO;
 import com.fiap.global_solution.model.dto.DoacaoDTO;
+import com.fiap.global_solution.model.enums.FormaEntrega;
+import com.fiap.global_solution.model.enums.FormaPagamento;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +21,7 @@ public class ContribuicaoMapper {
         dto.setEstado(model.getEstado());
         dto.setEndereco(model.getEndereco());
         dto.setValor(model.getValor());
-        dto.setFormaPagamento(model.getFormaPagamento());
+        dto.setFormaPagamento(model.getFormaPagamento().name());
         return dto;
     }
 
@@ -32,7 +34,7 @@ public class ContribuicaoMapper {
         model.setEstado(dto.getEstado());
         model.setEndereco(dto.getEndereco());
         model.setValor(dto.getValor());
-        model.setFormaPagamento(dto.getFormaPagamento());
+        model.setFormaPagamento(FormaPagamento.valueOf(dto.getFormaPagamento()));
         return model;
     }
 
@@ -47,7 +49,7 @@ public class ContribuicaoMapper {
             dto.setEstado(model.getEstado());
             dto.setEndereco(model.getEndereco());
             dto.setValor(model.getValor());
-            dto.setFormaPagamento(model.getFormaPagamento());
+            dto.setFormaPagamento(model.getFormaPagamento().name());
             dtos.add(dto);
         }
         return dtos;
@@ -64,7 +66,7 @@ public class ContribuicaoMapper {
             model.setEstado(dto.getEstado());
             model.setEndereco(dto.getEndereco());
             model.setValor(dto.getValor());
-            model.setFormaPagamento(dto.getFormaPagamento());
+            model.setFormaPagamento(FormaPagamento.valueOf(dto.getFormaPagamento()));
             contribuicoes.add(model);
         }
         return contribuicoes;
