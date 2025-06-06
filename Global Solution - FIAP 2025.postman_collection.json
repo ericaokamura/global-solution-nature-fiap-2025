@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "fd4a92b6-0c42-4399-97fa-f164f919dfae",
+		"name": "Global Solution | FIAP 2025",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8090/reports/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tipo\": \"Enchente\",\n    \"descricao\": \"Descrição da Enchente\",\n    \"severidade\": 2,\n     \"localizacao\": \"Lapa\",\n     \"criadoEm\": \"2025-05-27T11:05:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/reports/filtro/tipo/Deslizamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"reports",
+						"filtro",
+						"tipo",
+						"Deslizamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/reports/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/reports/filtro?tipo=Enchente&dataCriacao=2025-05-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"reports",
+						"filtro"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "Enchente"
+						},
+						{
+							"key": "dataCriacao",
+							"value": "2025-05-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/reports/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/reports/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"reports",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/doacoes/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeCompleto\": \"Alice Silva\",\n    \"telefone\": \"1198765432\",\n    \"email\": \"alice.silva@gmail.com\",\n    \"cidade\": \"Rio de Janeiro\",\n    \"estado\": \"RJ\",\n    \"endereco\": \"Rua Havaí, 150\",\n    \"itensDoados\": [ {\n        \"tipoDoacao\": \"ALIMENTOS\",\n        \"quantidade\": 10\n    }],\n    \"condicao\": \"NOVOS\",\n    \"formaEntrega\": \"MINHA_CASA\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/doacoes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"doacoes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/doacoes/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/doacoes/estado/SP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"doacoes",
+						"estado",
+						"SP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/contribuicoes/estado/MG",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/contribuicoes/estado/CE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"contribuicoes",
+						"estado",
+						"CE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/contribuicoes/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nomeCompleto\": \"Ioshiko Okamura\",\n    \"telefone\": \"1196572345\",\n    \"email\": \"ioshiko.okamura@gmail.com\",\n    \"cidade\": \"Fortaleza\",\n    \"estado\": \"CE\",\n    \"endereco\": \"Rua Heitor Penteado, 2500\",\n    \"valor\": 300.54,\n    \"formaPagamento\": \"PIX\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/contribuicoes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"contribuicoes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8090/contribuicoes/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/contribuicoes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"contribuicoes",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
